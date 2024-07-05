@@ -100,5 +100,8 @@
     .menuitem i {
       font-size: 15px;
     }
+    .navbar.expanded {
+      width: 150px;
+    }
     
   }
