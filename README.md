@@ -16,6 +16,8 @@ Redflix is a web application for exploring, streaming, and keeping track of TV s
 - Track top-rated movies and TV shows
 - Responsive design for various screen sizes
 
+  Demo page: http://redflixed.unaux.com
+
 ## Usage
 1. Search Movies/TV Shows: Use the search bar to find your favorite movies or TV shows.
 2. Explore Sections: Browse through different sections like Now Playing, Popular Movies, and Top Rated.
