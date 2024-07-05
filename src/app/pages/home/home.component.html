@@ -1,0 +1,93 @@
+<app-navbar></app-navbar>
+
+
+<div class="container katawan">
+    <div class="taas">
+      <div class="search-container">
+        <input 
+          type="text" 
+          placeholder="Search" 
+          class="search-input" 
+          [(ngModel)]="searchQuery" 
+          (keyup.enter)="searchMovies()"
+        >
+      </div>
+        <div class="buttonsd">
+            <i class="fas fa-user"></i>
+            <i class="fas fa-moon"></i>
+        </div>
+    </div>
+
+    <h1 class="container titlepage">Explore</h1>
+    <div class="container heropage">
+        <div class="sinasabi">
+            <h3>Keep Track of all the TV</h3>
+            <h3>shows and movies you</h3>
+            <h3>want to watch</h3>
+        </div>
+        <div class="avatar">
+            <img src="assets/spiderman.png" alt="spiderman" class="img-fluid">
+        </div>
+    </div>
+
+        <div class="moviesection">
+            <h4>Now Playing Movies</h4>
+            <div class="row">
+                <div *ngFor="let item of nowPlaying" class="col-4 col-md-2 box">
+                  <a [routerLink]="['/movie/', item.id]">
+                    <img [src]="getPosterUrl(item.poster_path)" [alt]="item.title" class="img-fluid">
+                    <p>{{ item.title }}</p>
+                  </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="moviesection">
+          <h4>Popular Movies</h4>
+          <div class="row">
+              <div *ngFor="let popular of popularMovies" class="col-4 col-md-2 box">
+                <a [routerLink]="['/movie/', popular.id]">
+                  <img [src]="getPosterUrl(popular.poster_path)" [alt]="popular.title" class="img-fluid">
+                  <p>{{ popular.title }}</p>
+                </a>
+              </div>
+          </div>
+      </div>
+
+      <div class="moviesection">
+        <h4>TV Shows</h4>
+        <div class="row">
+            <div *ngFor="let tv of tvShows" class="col-4 col-md-2 box">
+              <a [routerLink]="['/tvshow/', tv.id]">
+                <img [src]="getPosterUrl(tv.poster_path)" [alt]="tv.title" class="img-fluid">
+                <p>{{ tv.original_name }}</p>
+              </a>
+            </div>
+        </div>
+    </div>
+
+      <div class="moviesection">
+        <h4>Top Rated</h4>
+        <div class="row">
+            <div *ngFor="let rated of topRated" class="col-4 col-md-2 box">
+              <a [routerLink]="['/movie/', rated.id]">
+                <img [src]="getPosterUrl(rated.poster_path)" [alt]="rated.title" class="img-fluid">
+                <p>{{ rated.title }}</p>
+              </a>
+            </div>
+        </div>
+    </div>
+
+        
+
+
+
+
+
+      
+</div>
+
+
+  
+  

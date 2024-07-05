@@ -1,0 +1,46 @@
+<div class="navbar" [ngClass]="{'expanded': isExpanded}" (mouseover)="expandNavbar()" (mouseleave)="collapseNavbar()">
+    <div class="logo">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="menu">
+      <div class="menu-item">
+        <a [routerLink]="['/home']" (click)="onLinkClick()">
+          <i class="fas fa-home"></i>
+          <span *ngIf="isExpanded">Explore</span>
+        </a>
+      </div>
+      <div class="menu-item">
+        <a [routerLink]="['/movie']" (click)="onLinkClick()">
+          <i class="fas fa-film"></i>
+          <span *ngIf="isExpanded">Movies</span>
+        </a>
+      </div>
+      <div class="menu-item">
+        <a [routerLink]="['/tvshows']" (click)="onLinkClick()">
+          <i class="fas fa-tv"></i>
+          <span *ngIf="isExpanded">TV-shows</span>
+        </a>
+      </div>
+    </div>
+    <div class="misc">
+      <div class="misc-item">
+        <a routerLink="/help-center">
+          <i class="fas fa-question-circle"></i>
+          <span *ngIf="isExpanded">Help Center</span>
+        </a>
+      </div>
+      <div class="misc-item">
+      <a href="#" (click)="onAdminClick($event)"> 
+        <i class="fas fa-user-cog"></i>
+        <span *ngIf="isExpanded">Admin</span>
+      </a>
+      </div>
+    </div>
+
+    <div class="license">
+      <span class="watermark" *ngIf="isExpanded">ICTe Solutions 2024</span>
+      <span class="watermarkk" *ngIf="isExpanded">Red</span>
+    </div>
+
+  </div>
+  

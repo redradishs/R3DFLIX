@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="taas">
+    <div class="search-container">
+      <input type="text" placeholder="Search" class="search-input">
+    </div>
+    <div class="buttonsd">
+      <i class="fas fa-user"></i>
+      <i class="fas fa-moon"></i>
+    </div>
+  </div>
+
+  <div class="movieposter" *ngIf="movieDetails">
+    <div class="movieposter">
+      <img [src]="getPosterUrl(movieDetails.poster_path)" class="img-fluid">
+      <div class="detailed">
+        <h4>{{ movieDetails.original_name }}</h4>
+        <div class="genre" *ngFor="let genre of movieDetails.Genres">
+          <button>{{ genre }}</button>
+        </div>
+        <div class="buttond">
+          <button (click)="navigatetoPlayer();">
+            <i class="fas fa-play"></i>
+          </button>
+          <button>
+            <i class="fas fa-save"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="movieDetailsPage" *ngIf="movieDetails">
+    <h3>Synopsis</h3>
+    <p>{{ movieDetails.overview }}</p>
+  </div>
+
+  <div class="moviesection">
+    <h4>You may also like</h4>
+    <div class="row">
+      <div *ngFor="let item of nowPlaying" class="col-md-2 box">
+        <a [routerLink]="['/movie/', item.id]">
+          <img [src]="getPosterUrl(item.poster_path)" [alt]="item.title" class="img-fluid">
+          <p>{{ item.title }}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="streaming">
+    <h4>Watch Now</h4>
+    <iframe id="streamingIframe" [src]="streamingLink" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="runtime">
+    <h3>Seasons:</h3>
+    <div *ngFor="let season of movieDetails.seasons">
+      <button (click)="selectSeason(season)">Season {{ season.season_number }}</button>
+    </div>
+  </div>
+
+  <div class="runtime" *ngIf="selectedSeason">
+    <h3>Episodes of Season {{ selectedSeason.season_number }}:</h3>
+    
+      <div *ngFor="let episode of selectedSeason.episodes">
+        Episode {{ episode.episode }}:
+        <button (click)="selectEpisode(selectedSeason.season_number, episode.episode)">Watch</button>
+      </div>
+  </div>
+
+</div>

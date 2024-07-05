@@ -1,0 +1,38 @@
+
+
+  <div class="container">
+    <div class="taas">
+      <div class="search-container">
+        <input 
+          type="text" 
+          placeholder="Search" 
+          class="search-input" 
+          [(ngModel)]="searchQuery" 
+          (keyup.enter)="searchMovies()"
+        >
+      </div>
+        <div class="buttonsd">
+            <i class="fas fa-user"></i>
+            <i class="fas fa-moon"></i>
+        </div>
+    </div>
+    
+    <div class="moviesection">
+      <h4>Search Results for {{searchQuery}}</h4>
+      <div class="listed" *ngIf="searchResults && searchResults.length > 0; else noResults">
+        <div class="row">
+          <div *ngFor="let item of searchResults" class="col-4 col-md-2 box">
+            <a [routerLink]="['/movie/', item.id]">
+              <img [src]="getPosterUrl(item.poster_path)" [alt]="item.title" class="img-fluid">
+              <p>{{ item.title }}</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <ng-template #noResults>
+        <p>No results found for "{{ searchQuery }}"</p>
+      </ng-template>
+    </div>
+  </div>
+  
+  

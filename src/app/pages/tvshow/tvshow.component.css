@@ -1,0 +1,110 @@
+
+.taas {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    z-index: 1000; 
+    width: 100%;
+}
+
+.buttonsd {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.search-container {
+    width: 40%;
+    max-width: 400px; 
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px 40px 10px 20px; 
+    border: none;
+    border-radius: 25px;
+    background-color: #3d3d3d; 
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .search-input::placeholder {
+    color: #aaa; 
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #aaa; 
+    font-size: 18px;
+  }
+
+  
+
+
+  .moviesection {
+    margin-top: 2%;
+  }
+
+  .moviesection h4 {
+    margin-bottom: 1%;
+  }
+
+  .box {
+    border-radius: 20px;
+  }
+
+    .box {
+    border-radius: 20px;
+  }
+  
+
+  .box img {
+    border-radius: 20px;
+  }
+
+  a {
+    text-decoration: none; 
+    color: inherit; 
+    border: none; 
+    background: none; 
+    padding: 0; 
+    margin: 0; 
+    display: inline;
+  }
+
+  .moviesection p {
+    text-align: center;
+  }
+
+
+  @media (max-width: 767px) {
+    .heropage {
+        flex-wrap: nowrap;
+        background-color: rgb(212, 65, 65);
+        height: 20vh;
+    }
+
+    .heropage h3 {
+      font-size: 0.60rem;
+      font-weight: 300;
+    }
+
+    .titlepage {
+      font-size: 2rem;
+    }
+
+    .moviesection h4 {
+      font-size: 1rem;
+      margin-top: 5%;
+      margin-bottom: 1%;
+    }
+
+    .moviesection p {
+      font-size: 0.70rem;
+    }
+  }
+  

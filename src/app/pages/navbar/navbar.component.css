@@ -1,0 +1,104 @@
+.navbar {
+    background-color: #1a1a1a;
+    color: #fff;
+    width: 80px; 
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 0.3s;
+  }
+  
+  .navbar.expanded {
+    width: 250px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu, .misc {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .menu-item, .misc-item {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.3s;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .menu-item:hover, .misc-item:hover {
+    background-color: #333;
+    cursor: pointer;
+  }
+  
+  .menu-item i, .misc-item i {
+    font-size: 20px;
+  }
+  
+  .menu-item span, .misc-item span {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    margin-left: 10px;
+  }
+  
+  .navbar.expanded .menu-item span, .navbar.expanded .misc-item span {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .menu-item a, .misc-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .watermark {
+    font-size: 10px;
+    font-style: italic;
+    color: rgb(92, 92, 92);
+  }
+
+  .watermarkk {
+    font-size: 10px;
+    font-style: italic;
+    color: rgb(92, 92, 92);
+  }
+
+  .license {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  @media (max-width: 767px) {
+    .navbar {
+      width: 50px;
+      padding: 10px 5px; 
+    }
+
+    .menuitem i {
+      font-size: 15px;
+    }
+    
+  }

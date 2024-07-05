@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="taas">
+    <div class="search-container">
+      <input 
+        type="text" 
+        placeholder="Search" 
+        class="search-input" 
+        [(ngModel)]="searchQuery" 
+        (keyup.enter)="searchMovies()"
+      >
+    </div>
+      <div class="buttonsd">
+          <i class="fas fa-user"></i>
+          <i class="fas fa-moon"></i>
+      </div>
+  </div>
+
+
+    <div class="moviesection">
+      <h4>TV Shows</h4>
+      <div class="row">
+          <div *ngFor="let ig of tvShows" class="col-4 col-md-2 box">
+            <a [routerLink]="['/tvshow/', ig.id]">
+              <img [src]="getPosterUrl(ig.poster_path)" [alt]="ig.original_name" class="img-fluid">
+              <p>{{ ig.original_name }}</p>
+            </a>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+
+</div>

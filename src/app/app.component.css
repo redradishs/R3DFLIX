@@ -1,0 +1,19 @@
+.main-content {
+    margin-left: 80px; /* Initial margin to match the collapsed navbar */
+    padding: 20px;
+    transition: margin-left 0.3s;
+  }
+  
+  
+  
+
+  .main-content {
+    margin-left: 80px; /* Initial margin to match the collapsed navbar */
+    padding: 20px;
+    transition: margin-left 0.3s;
+  }
+  
+  .main-content.expanded {
+    margin-left: 250px; /* Adjusted margin to match the expanded navbar */
+  }
+  
