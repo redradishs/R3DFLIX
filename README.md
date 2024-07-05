@@ -1,27 +1,27 @@
-# R3DFLIX
+# Redflix
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+Redflix is a web application for exploring, streaming, and keeping track of TV shows and movies you want to watch. Built with Angular 17 standalone, this project aims to offer an incredible experience for Movies and TV Shows enthusiasts. I made use of TMDB's API for Movies and TV Shows database and API of a Movie Platform for streaming content. 
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Search for movies and TV shows
+- View now playing movies
+- Explore popular movies
+- Track top-rated movies and TV shows
+- Responsive design for various screen sizes
 
-## Build
+## Usage
+1. Search Movies/TV Shows: Use the search bar to find your favorite movies or TV shows.
+2. Explore Sections: Browse through different sections like Now Playing, Popular Movies, and Top Rated.
+3. Navigation: Click on any movie or TV show to view more details.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Project under:
+ICTe Solutions - Red Sanchez
